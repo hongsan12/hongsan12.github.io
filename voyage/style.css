@@ -1,5 +1,7 @@
 @charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Poiret+One);
+* { padding: 0; margin: 0; text-decoration: none; list-style: none; font-family: poiret One; }
+
 @media only screen and (max-width: 1025px) { .container section article p em, .container section article p strong { font-size: calc(0.5rem + 1vw); }
   .container section article p span { font-size: calc(2rem + 5vw); }
   .container section article:nth-of-type(1) { overflow: scroll; }
@@ -45,8 +47,6 @@
   .container section article:nth-of-type(4) > p:nth-of-type(5) { width: 0%; height: 0%; }
   .container section article:nth-of-type(4) > p:nth-of-type(6) { width: 50%; height: 50%; float: right; }
   .container section article:nth-of-type(4) > p:nth-of-type(7) { width: 50%; height: 25%; } }
-* { padding: 0; margin: 0; text-decoration: none; list-style: none; font-family: poiret One; }
-
 body { background-image: url(./iamges/beach/ryan-wilson-YdpDztAnW9w-unsplash.jpg); background-size: cover; }
 
 article p span { font-size: calc(1rem + 5vw); }
