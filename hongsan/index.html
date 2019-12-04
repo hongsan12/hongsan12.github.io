@@ -373,7 +373,7 @@ $(document).ready(function(){
          
         }
         
-     $(document).on("mousemove  DOMMouseScroll",function(e){  		
+     $(document).on("mousemove",function(e){  		
 		var ax = -($(window).innerWidth()/2- e.pageX/20);
 		var ay = ($(window).innerHeight()/2- e.pageY/20);
     $(".wrap").attr("style", "transform: rotateY("+-15+ax/2*-1+"deg) rotateX("+ay+"deg) ");	           
@@ -382,7 +382,7 @@ $(document).ready(function(){
 	var idx=0;
 
 	// 첫번째 섹션 휠 스크립트
-	$(window).on("mousewheel",function(event,delta){    
+	$(window).on("mousewheel DOMMouseScroll",function(event,delta){    
     
   
 
