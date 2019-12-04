@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .top {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 99999;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .character {
+            width: 175px;
+            height: 175px;
+            background-image: url(http://seunghee.co.kr/parallax/img/right.png);
+            position: fixed;
+            left: 50%;
+            margin-left: -78px;
+            bottom: 0;
+            z-index: 10;
+        }
+
+        .character.walking {
+            animation: walk 0.5s steps(10, start) infinite;
+        }
+
+        .character.left {
+            
+            background-position: 0px;
+        }
+
+        @keyframes walk {
+            from {
+                background-position: 0px 0px;
+            }
+
+            to {
+                background-position: 1750px 0px
+            }
+        }
+
+        .road {
+            overflow: hidden;
+            position: fixed;
+            height: 100vh;
+            width: 15000px;
+            color: #fff;
+        }
+
+        .road>div {
+            width: 1500px;
+        }
+
+        .container {
+            float: left;
+            height: 100vh;
+            line-height: 100vh;
+            text-align: center;
+            width: 1500px;
+            position: relative;
+            font-size: 70px;
+        }
+
+        .road {
+            overflow: hidden;
+            position: fixed;
+            height: 100vh;
+            width: 15000px;
+        }
+
+        .road>div {
+            width: 1500px;
+        }
+
+        .container {
+            float: left;
+            height: 100vh;
+            line-height: 100vh;
+            text-align: center;
+            width: 1500px;
+            position: relative;
+            font-size: 70px;
+        }
+
+        .road1 {
+            background-color: #fce4ec;
+        }
+
+        .road2 {
+            background-color: #f8bbd0;
+        }
+
+        .road3 {
+            background-color: #f48fb1;
+        }
+
+        .road4 {
+            background-color: #f06292;
+        }
+
+        .road5 {
+            background-color: #fce4ec;
+        }
+
+        .road6 {
+            background-color: #f8bbd0;
+        }
+
+        .road7 {
+            background-color: #f48fb1;
+        }
+
+        .road8 {
+            background-color: #f06292;
+        }
+
+        .road9 {
+            background-color: #fce4ec;
+        }
+
+        .road10 {
+            background-color: #f8bbd0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">0</div>
+
+    <div class="character"></div>
+    <div class="road">
+        <div class="container road1">START</div>
+        <div class="container road2">RUN</div>
+        <div class="container road3">RUN</div>
+        <div class="container road4">RUN</div>
+        <div class="container road5">RUN</div>
+        <div class="container road6">RUN</div>
+        <div class="container road7">RUN</div>
+        <div class="container road8">RUN</div>
+        <div class="container road9">RUN</div>
+        <div class="container road10">RUN</div>
+    </div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        var lastScrollTop = 0;								//마지막 상태의 스크롤 변수에 할당
+        var roadLength = $(".road").width();	//전체 가로 값 : 15000px
+        //alert(roadLength);
+        $("body").css("height", roadLength);
+
+        $(window).scroll(function () {
+            var wWidth = $(window).width();			//현재 화면의 가로 값
+            var wHeight = $(window).height();		//현재 화면의 세로 값
+            var scrollTop = $(window).scrollTop(); 		//현재 화면의 스크롤 값
+            var dHeight = $("body").height() - wHeight;		//전체 세로 값 - 현재 화면의 세로 값
+            var wRoad = roadLength - wWidth;							//전체 가로 값 - 현재 화면의 가로 값
+            var step = wRoad / dHeight;											// 전체 가로 값 / 전체 세로 값
+
+            //스크롤이 하단까지 내려갔는지 확인
+            if( scrollTop >= wRoad ){                
+                $(window).animate({scrollTop:0},500);
+            }
+
+            var goLeft = scrollTop * step;
+
+            $(".road").css({ "transform": "translateX(-" + goLeft + "px)" });
+
+            clearTimeout($.data(this, "scrollCheck"));
+            
+            lastScrollTop = scrollTop;
+
+            $(".top").text(scrollTop);
+
+         
+            // $(document).keydown(function () {
+            //     if (e.width == 39) {
+            //         var scrollTop = $(document).scrollTop();
+            //         $(window).scrollTop(scrollTop + 50);
+            //     }
+            //     if (e.width == 37) {
+            //         var scrollTop = $(document).scrollTop();
+            //         $(window).scrollTop(scrollTop - 50);
+            //     }
+            // });
+        });    
+    </script>
+</body>
+
+</html>
