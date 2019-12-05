@@ -159,7 +159,7 @@
         <p>홈페이지를</p>
         <p>index값을 </p>
         <p>이용한 다른 방식으로<br>만들어 보았습니다</p>
-        <p><a href="../Nike/pofol.html">View Site</a></p>
+        <p><a href="http://hongsan12.github.io/Nike/pofol.html" target="_blank">View Site</a></p>
       </div>
       </article>
     </section>
@@ -186,7 +186,7 @@
            <p>홈페이지를</p>
            <p>transform을</p>
            <p>이용해 동적인 효과를 주고 <br> 디자인 하여 만들었습니다</p>
-           <p><a href="../voyage/index.html">View Site</a></p>
+           <p><a href="http://hongsan12.github.io/voyage/index.html"   target="_blank">View Site</a></p>
          </div>
           </article>
     </section>
@@ -211,7 +211,7 @@
           <p>홈페이지</p>
           <p>스크롤 이벤트를</p>
           <p>이용해 개성있는 효과를<br>만들었습니다</p>
-          <p><a href="../Gucci/index.html">View Site</a></p>
+          <p><a href="http://hongsan12.github.io/Gucci/subpage/index.html"  target="_blank">View Site</a></p>
         </div>
         </article>
       </section>
@@ -234,7 +234,7 @@
               <p>CSS와</p>
               <p>scrollTop을</p>
               <p>이용해 동적인 효과를<br>주었습니다</p>
-              <p><a href="../effcet/LoL.html">View Site</a></p>
+              <p><a href="http://hongsan12.github.io/effcet/LoL.html"  target="_blank">View Site</a></p>
            </div>
             </article>
       </section>
@@ -373,7 +373,7 @@ $(document).ready(function(){
          
         }
         
-     $(document).on("mousemove",function(e){  		
+     $(document).on("mousemove  ",function(e){  	
 		var ax = -($(window).innerWidth()/2- e.pageX/20);
 		var ay = ($(window).innerHeight()/2- e.pageY/20);
     $(".wrap").attr("style", "transform: rotateY("+-15+ax/2*-1+"deg) rotateX("+ay+"deg) ");	           
@@ -382,7 +382,7 @@ $(document).ready(function(){
 	var idx=0;
 
 	// 첫번째 섹션 휠 스크립트
-	$(window).on("mousewheel DOMMouseScroll scroll",function(event,delta){    
+	$(window).on("mousewheel DOMMouseScroll",function(event,delta){    
     
   
 
