@@ -1,0 +1,88 @@
+*{padding: 0; list-style: none;  margin: 0; text-decoration: none;  }
+
+//헤드
+ nav{ position: fixed; width: 100%; top: 0px; color: white; background-color: black;
+    >div{position: absolute; left: 0px; top: 0px; text-align: right; width: 100%; a:last-child{img{padding-right: 2%; padding-top: 1%;} } }
+    ul{ height: calc(2.5rem + 4vw); margin: 0px; padding: 0; text-align: center; display: flex; flex-flow: row wrap;align-content:center; justify-content: center; }  
+    ul:hover{ transition: 1s;} 
+    li {  font-size:calc(0.5rem + 0.6vw); margin: 5px; display: inline-block;} 
+    div{ width: 100%; margin: 0;   font-size:calc(1rem + 1vw); letter-spacing: 0.5vw; font-weight:bold ;} 
+    a{   color: white; } }  //  
+
+section{
+    article:nth-of-type(1){ width: 100%; height: 70%; display: inline-flex; flex-flow: column; justify-content: center; background-color:#e7e7e7; 
+        >div:nth-of-type(1){width: 100%; height: calc(2.5rem + 4vw); background-color: blue;}
+
+            >div:nth-of-type(2){width: 100%;   display: flex;  flex: 1; font-size: calc(0.1rem + 0.8vw);
+
+
+                >div:nth-of-type(1){ width: 50%; height: 100%; display: flex; align-items: center; justify-content: center; 
+                            form{width: 40%;height: 75%; display: flex; flex-flow: row wrap;
+                                >div:nth-of-type(1){ height: 60%; width: 100%;
+                                    h1{width: 100%; height: 20%; padding-bottom: 10%; text-align: center; font-size: calc(1rem + 0.8vw); font-weight: 100;}
+                                    input[type=email]{width: 100%; height: 10%; background-color: white; border: 0; margin-bottom: 3%; padding: 10px; font-size: calc(0.1rem + 0.5vw);}
+                                    input[type=password]{width: 100%; height: 10%; background-color: white; border: 0;  padding: 10px; font-size: calc(0.1rem + 0.5vw);}
+                                    p{width: 100%; font-size: calc(0.1rem + 0.5vw); margin: 3px; margin-bottom: 5%; }                            
+                                    input[type=checkbox]{ display: none; }
+                                    input[type=checkbox] + label {position: relative; display: inline-block; width: 10px; height: 10px; background-color: white;}
+                                    .checkbox-copy{position: absolute; left:200% ; bottom: 0px; width: 100px; font-size: calc(0.1rem + 0.5vw); }
+                                    input[type=checkbox]:checked + label { width: 10px; height: 10px; background-color: black;  }
+                                }
+                                >div:nth-of-type(2){  height: 40%;
+                                    button{cursor: pointer; width: 100%; margin-bottom:5%;  height: 20%; font-size: calc(0.3rem + 0.5vw); background-color: rgb(31, 31, 31); border: 0; color: rgb(219, 219, 219);}
+                                    .input-a{  width: 100%; text-align: center; a{color: black;}}}
+                                }
+                            }
+
+
+                >div:nth-of-type(2){ width: 50%; height: 100%; background-image: url(../images/login_main.jpg); background-size: 200% 200%; background-position: top right;  display: flex; align-items: center; justify-content: center;
+                    >div:nth-of-type(1){ width: 40%; height: 75%;   display: flex; flex-flow: row wrap;
+                        >div:nth-of-type(1){ height: 60%;
+                            h1{width: 200%; height: 20%;  text-align: left; font-size: calc(1rem + 0.8vw); font-weight: 500; color: white;}
+                            >p{width: 100%;  text-align:left; color: white; font-weight: 100; font-size: calc(0.5rem + 0.8vw);
+                                >span{font-size: calc(1rem + 0.8vw); font-weight: 500; line-height: 50px; }   } }
+                        
+                        >div:nth-of-type(2){ width: 100%; height: 40%;  a{ color: black;font-size: calc(0.3rem + 0.5vw);  font-weight: bold;
+                            >p{ position: relative; height: 20%; text-align: center; background-color: #e7e7e7; span{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);} } }                           
+                        }
+
+                   
+                 
+                        
+                }
+                
+            
+            
+            
+            }                
+        }
+
+       
+    }
+
+
+//풋터
+    article:nth-of-type(2){background-color: #edf2f4;  width: 100%; height: 30%; display:flex; flex-flow: row wrap; justify-content: center; align-content: center;
+        
+        
+          >div:nth-of-type(1){ display: inline-flex; flex-flow: row wrap; justify-content: center;background: #1b1b1b;
+          width: 100%;height: 100%; align-items: center; h1{margin: 14 0;}
+                    ul{ width: 15%;height: 35%; font-size: calc(0.3rem + 0.3vw); font-weight: 500;
+                    font-style: normal; color: #999; 
+                            li a{color: whitesmoke; font-size:calc(0.1rem + 0.3vw);  } }
+          ul:last-child{width: 75%; height: 30%; position: relative;
+                     div{ position: absolute; right: 0px; img{margin: 5px; z-index: -1; max-width:20% ; height: auto;} }
+                     img:hover{filter: brightness(200%); } }      
+
+//인풋
+          form{ background-color: black;}
+          input:nth-of-type(1){ border: 0; background-color: black; width:70%; }
+          input:nth-of-type(2){width: 25%;  border: 0; background-color: black; color: #999; }
+                                }  
+        
+    } 
+
+
+
+    
+}

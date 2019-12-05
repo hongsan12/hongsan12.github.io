@@ -1,0 +1,93 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+        <div><a href="../LoL.html" style="cursor: pointer;">
+            <li>
+            <img src="../image/Logo.png"></li>
+            <li><p>League of Legends</p></li>
+        </a></div>
+    <p class="rttext">본 사이트는 RECAPTCHA와 구글 개인정보 처리방침 및 사용약관에 의해 보호받고 있습니다.</p>
+    <ul class="lttext">
+        <li><a href="#">고객센터</a></li>
+        <li><a href="#">개인정보 처리방침</a></li>
+        <li><a href="#">사용약관</a></li> 
+        <p>© 2019 RIOT GAMES. ALL RIGHTS RESERVED</p>
+    </ul>
+    <section>
+        <span> 
+            <div>
+                <h1>로그인</h1>
+                <div class="input">
+                    <input name="username" type="text" value="">                    
+                    <span >계정이름</span>
+                </div>
+
+                <div class="input">
+                    <input type="password">                    
+                    <span >비밀번호</span>
+                </div>
+
+                <div>
+                    <input id="checkbox" type="checkbox">
+                    <label for="checkbox">
+                        <span class="checkbox-copy">Stay signed in</span>
+                    </label>
+                    
+                    <div id="drop">
+                       <label for="mySelect"><span id="drop2" >
+                            KR
+                        </span></label> 
+                        <select  onchange="myFunction()" name="region"  id="mySelect">
+                            <option value="KR">대한민국</option>
+                            <option value="BR1" >브라질</option>
+                            <option value="EUN1" >북유럽 및 동유럽</option>
+                            <option value="EUW1" >서유럽</option>
+                            <option value="JP1" >일본</option>
+                            <option value="LA1" >라틴아메리카 북부</option>
+                            <option value="LA2" >라틴아메리카 남부</option>
+                            <option value="NA1" >북미</option>
+                            <option value="OC1" >오세아니아</option>
+                            <option value="PBE1" >PBE 테스트 서버</option>
+                            <option value="RU" >러시아</option>
+                            <option value="TR1"> 터키</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <p id="demo"></p>
+                <footer>
+                    <p><a href="#">로그인이 안되시나요?</a></p>
+                    <p><a href="#">계정을 생성 하시겠습니까?</a></p>
+
+                </footer>
+            </div>
+           
+    </section>
+    
+</body>
+</html>
+<script>
+    var x = document.getElementById("mySelect");
+    var s = document.getElementById("drop2");
+    console.log(x)
+      var sbox = document.getElementById("mySelect").children;
+ function myFunction() {
+    for( let i=0 ; i < sbox.length;i++ ){      
+                s.innerHTML = x.value;  
+                console.log(1)
+            }
+ }
+//  셀렉박스 목록 전체바꾸기
+//  var sbox = document.getElementById("mySelect").children;
+//  document.getElementById("drop").addEventListener('click',function(){
+//          console.log(1)
+//               })   
+   
+</script>

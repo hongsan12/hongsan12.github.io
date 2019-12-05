@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /*배경색*/
+body { 
+        background-color: #e9e9e9
+     }
+/*제목*/
+.title  {
+          color : red;
+          text-align: center;
+        }
+/*마킹입력상자*/
+#myText {
+          position:absolute;
+          height : 32px ;
+          left:40%;
+          text-align: center;
+          width:289px;
+          border:solid 3px #231816;
+          margin : 0 auto ;
+        }
+#demo {
+        text-align: center;
+      }
+
+.search
+            {
+              position:absolute;
+              left:55%;
+              top: 10%
+            }
+    </style>
+<title>따닥 </title>
+<meta charset="utf-8">
+
+</head>
+
+<body>
+
+<h3 class="title">따닥</h3>
+
+<input type="text" id= "myText" placeholder="마킹 입력">
+<br>
+
+<input type="image" class="search"src="file:///C:/Users/emisk/Desktop/%EB%B0%9C%EA%B5%AC%EC%A7%80/search%20img.png" onclick="myFunction()" value="">
+<p id="demo"></p>
+
+
+<script>
+function myFunction()
+{
+  var x = document.getElementById("myText").value;
+  if( x =="DSI50")
+  document.getElementById("demo").innerHTML ="1";
+  if( x =="DSI60")
+  document.getElementById("demo").innerHTML = "2";
+  if( x =="DSI67")
+  document.getElementById("demo").innerHTML = "3";
+  if( x =="DSI74")
+  document.getElementById("demo").innerHTML = "4";
+}
+</script>
+
+</body>
+</html>

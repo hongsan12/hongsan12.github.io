@@ -1,0 +1,46 @@
+* { padding: 0; margin: 0 auto; text-decoration: none; }
+* a { cursor: not-allowed; }
+
+body { background-color: black; position: relative; }
+body > div { position: absolute; left: 2%; top: 2%; z-index: 1; }
+body > div li { display: inline-block; }
+body > div a { color: #a8a6a6; font-size: calc(0.5rem + 0.8vw ); font-weight: bold; }
+body > p { font-size: calc(0.3rem + 0.3vw); position: absolute; bottom: 2%; right: 2%; color: #969393; z-index: 2; }
+body > ul { font-size: calc(0.3rem + 0.5vw); position: absolute; bottom: 2%; left: 2%; z-index: 2; }
+body > ul li { display: inline-block; }
+body > ul li a { color: #a8a6a6; font-weight: bold; }
+body > ul p { color: #969393; }
+
+section { position: relative; width: 100%; height: 100%; background-image: url(./riot_desktop_background_2x.jpg); background-size: 100% 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+section > span { width: 30%; height: 71%; background-image: url(./1f3fc29f321dfd8b70c3d53b8aba7453.jpg); background-repeat: no-repeat; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; background-size: 100% 100%; }
+section > span > div { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column; flex-flow: column; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.9); }
+section > span > div h1 { font-size: 2rem; width: 100%; height: 30%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+section > span > div .input { margin: 1.5% 15%; position: relative; color: #969393; font-weight: bold; width: 70%; height: 10%; }
+section > span > div .input input { width: 100%; height: 100%; padding: 5% 0 1% 1%; border: none; -webkit-transition: 0.3s; transition: 0.3s; background-color: #e0e0e0; border-radius: 3%; }
+section > span > div .input span { position: absolute; top: 50%; left: 2%; -webkit-transform: translate(0, -50%); transform: translate(0, -50%); -webkit-transition: 0.3s; transition: 0.3s; font-size: calc(.4rem + .5vw); }
+section > span > div .input input:focus + span { top: 20%; font-size: calc(.15rem + .5vw); }
+section > span > div .input input:focus { outline: none; border: 2px solid black; }
+section > span > div .input input:hover { background-color: #f0f0f0; }
+section > span > div > div { display: -webkit-box; display: -ms-flexbox; display: flex; width: 70%; margin: 5% 15%; -webkit-box-pack: right; -ms-flex-pack: right; justify-content: right; }
+section > span > div input[type=checkbox] { display: none; }
+section > span > div input[type=checkbox] + label { margin-left: 1%; position: relative; display: inline-block; width: 25px; height: 25px; background-color: white; border-radius: 20%; }
+section > span > div .checkbox-copy { position: absolute; left: 150%; bottom: 0px; width: 150px; font-size: calc(0.5em + 0.5vw); color: #969393; font-weight: bold; }
+section > span > div .checkbox-copy:hover { color: #5c5c5c; }
+section > span > div input[type=checkbox]:checked + label { width: 25px; height: 25px; background-image: url(./check.png); }
+section > span > div input[type=checkbox] + label:hover { background-color: #f1f1f1; }
+section > span > div #drop { border: 2px solid #969393; color: #969393; font-weight: bold; font-size: calc(0.1rem + 0.7vw); margin-right: 1%; padding: 5px; border-radius: 8%; width: 80px; display: -webkit-box; display: -ms-flexbox; display: flex; background-color: rgba(224, 223, 223, 0.9); }
+section > span > div #drop span { width: 25px; }
+section > span > div #drop select { background-color: rgba(224, 223, 223, 0.9); width: 18px; border: 0; margin: 0; }
+section > span > div footer { padding-top: 23%; width: 70%; margin: 0% 15% 0%; font-size: calc(0.3rem + 0.5vw); }
+section > span > div footer p { text-align: center; margin: 10px; }
+section > span > div footer p a { color: #969393; font-weight: bold; }
+section > span > div footer p:hover > a { color: #5c5c5c; }
+
+@media only screen and (max-width: 1200px) { section span { width: 40%; } }
+@media only screen and (max-width: 1024px) { section span { width: 50%; } }
+@media only screen and (max-width: 768px) { section span { width: 80%; }
+  .lttext { bottom: 8%; }
+  .rttext { left: 2%; }
+  #drop { bottom: 30%; position: absolute; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); } }
+
+/*# sourceMappingURL=style.css.map */

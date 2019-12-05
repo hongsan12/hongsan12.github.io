@@ -1,0 +1,73 @@
+*{padding: 0; margin: 0 auto;  text-decoration: none;  a{cursor: not-allowed;} }
+
+
+
+body{ background-color: black; position: relative;
+ >div{ position: absolute; left: 2%; top: 2%; z-index: 1; 
+     li{ display: inline-block;}
+      a{ color:rgb(168, 166, 166); font-size: calc(0.5rem + 0.8vw ) ; font-weight: bold;} }
+ >p{font-size: calc(0.3rem + 0.3vw);  position: absolute; bottom: 2%; right: 2%;  color:rgb(150, 147, 147); z-index: 2; }
+ >ul{ font-size: calc(0.3rem + 0.5vw);  position: absolute; bottom: 2%; left: 2%;  z-index: 2;
+    li{ display: inline-block;
+    a{  color:rgb(168, 166, 166); font-weight: bold;}  }
+
+    p{ color:rgb(150, 147, 147);}
+      } 
+     }
+section{position: relative; width: 100%; height: 100%; background-image:url(./riot_desktop_background_2x.jpg) ; background-size: 100% 100%; display: flex; align-items: center;
+    
+    >span{ width: 30%; height: 71%; background-image: url(./1f3fc29f321dfd8b70c3d53b8aba7453.jpg); background-repeat: no-repeat;display: flex; align-items: center; background-size: 100% 100%;
+
+        >div{ display: flex; flex-flow: column;    width: 100%; height: 100%;  background-color: rgba(255, 255, 255, 0.9);  
+          
+            h1{ font-size: 2rem; width: 100%; height: 30%; display: flex; align-items: center; justify-content: center; }
+
+            .input{margin: 1.5% 15%; position:  relative; color:rgb(150, 147, 147); font-weight: bold;   width: 70%; height: 10%;
+
+                input{  width: 100%; height: 100%; padding: 5% 0 1% 1%; border: none; transition: 0.3s;  
+                  background-color: rgb(224, 224, 224); border-radius: 3%;  }
+                span{position: absolute;  top: 50%; left: 2%; transform: translate(0,-50%); transition: 0.3s; font-size:calc(.4rem + .5vw); } 
+                input:focus+span{ top: 20%;font-size:calc(.15rem + .5vw); } 
+                input:focus{ outline: none; border: 2px solid black; }
+                input:hover{ background-color:rgb(240, 240, 240);}
+              }             
+            >div{ display: flex; width: 70%; margin: 5% 15%;  justify-content: right;}
+                input[type=checkbox]{ display: none; }
+                input[type=checkbox] + label {margin-left: 1%; position: relative; display: inline-block; width: 25px; height: 25px; background-color: white; border-radius: 20%; }              
+                .checkbox-copy{position: absolute; left:150% ; bottom: 0px; width: 150px; font-size: calc(0.5em + 0.5vw); color:rgb(150, 147, 147); font-weight: bold;}
+                .checkbox-copy:hover{ color: rgb(92, 92, 92); }
+                input[type=checkbox]:checked + label {  width: 25px; height: 25px; background-image: url(./check.png);  }
+                input[type=checkbox] + label:hover{ background-color:rgb(241, 241, 241); }
+                #drop{border: 2px solid rgb(150, 147, 147); color:rgb(150, 147, 147); font-weight: bold; font-size: calc(0.1rem + 0.7vw);margin-right: 1%; padding: 5px; border-radius: 8%; width: 80px; display: flex;  background-color: rgba(224, 223, 223, 0.9);
+                  span{width: 25px;  } select{  background-color: rgba(224, 223, 223, 0.9); width: 18px; border: 0; margin: 0; }
+                  // 스판 눌렀을때 드롭다운 되게해야함
+                  // 동영상 크기 조절
+              }
+
+            footer{  padding-top: 23%; width: 70%; margin: 0% 15% 0% ; font-size: calc(0.3rem + 0.5vw); 
+                p { text-align: center; margin: 10px; a{ color:rgb(150, 147, 147); font-weight: bold;}} 
+                p:hover>a{ color: rgb(92, 92, 92);}}
+
+
+            }
+
+          }
+
+        }
+
+        @media only screen and (max-width: 1200px){
+          section{span{ width: 40%; }}}
+
+
+          @media only screen and (max-width: 1024px){
+            section{span{ width: 50%; }}}
+            
+            
+        @media only screen and (max-width: 768px){
+          section{span{ width: 80%; }}
+        .lttext{ bottom: 8%;  }
+        .rttext{ left: 2%;}
+        #drop{ bottom: 30%; position: absolute; left: 50%; transform: translate(-50%,-50%);
+          
+        }
+        }
