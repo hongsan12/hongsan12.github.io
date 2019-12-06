@@ -15,7 +15,9 @@
 </head>
 
 <body>
+  
     <section id="intro">
+        
         <div class="particle">
 
           </div>
@@ -140,7 +142,11 @@
     </section>
     <section>
       <article>
-        <img src="./images/NIKE_main.jpg" class="img01" style="filter: grayscale(100%);">
+        
+        <a  href="http://hongsan12.github.io/Nike/pofol.html" target="_blank">
+          <img src="./images/NIKE_main.jpg" class="img01" style="filter: grayscale(100%);">
+        </a>
+     
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         viewBox="0 0 90 100.7" style="enable-background:new 0 0 90 100.7;" >
      <g>
@@ -217,7 +223,9 @@
       </section>
       <section>
           <article>
+            
               <img src="./images/LOL.jpg" class="img04" style="filter: grayscale(100%);">
+            
               <svg version="1.1" id="Layer_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               viewBox="0 0 121.8 107.5" style="enable-background:new 0 0 121.8 107.5;" >           
            <g>
@@ -348,7 +356,7 @@
       </div>
       </section>
       
-      
+      <div class="cursor"></div>
 </body>
  <script>
 $(document).ready(function(){
@@ -528,6 +536,41 @@ $(document).ready(function(){
      
      
     });    
+
+//마우스 블랜드
+    var cursor = $('.cursor')
+ 
+   $(document).mousemove(function(e) {
+      mouseX = e.pageX;
+      mouseY = e.pageY;
+      cursor.css("left", mouseX+10).css("top", mouseY+10);
+ });
+
+ $(document).on('click',function(e) {
+     
+      cursor.addClass('click');
+      setTimeout(function(){
+        cursor.removeClass('click')
+      },1000)
+ });
+ $('a').on('mouseover',function(){
+  cursor.addClass('over');
+     
+ })
+ $('a').on('mouseout',function(){
+  cursor.removeClass('over');
+     
+ })
+
+ $("a").click(function(e){
+    e.preventDefault();
+    if (this.href) {
+        var target = this.href;
+        setTimeout(function(){
+            window.open(target)
+        }, 1000);
+    }
+});
   });
 </script>
 </html>

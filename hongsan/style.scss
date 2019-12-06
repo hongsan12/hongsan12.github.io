@@ -1,8 +1,59 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap');
-*{ margin: 0; text-decoration: none; list-style: none; padding: 0; font-family: 'Noto Serif KR', serif;}
+*{ a{cursor: none;} margin: 0; text-decoration: none; list-style: none; padding: 0; font-family: 'Noto Serif KR', serif;}
+body{ cursor: none;}
 
+.cursor{
+  position: absolute;
+  background: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  z-index:999;
+  user-select: none;   
+  mix-blend-mode: difference; 
 
+}
+.cursor::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  top: 50%;left: 50%;
+  transform: translate(-50%,-50%);
+  border: 1px solid #fff ;
+  animation: mouse 2s infinite;
+}
 
+ @keyframes mouse {
+   0%{ width: 120%; height: 100%; }
+   15%{ width: 150%; height: 100%;}
+   30%{ width: 120%;height: 100%; }
+   50%{ width: 100%; height: 100%;   }
+   65%{ height: 120%; }
+   80%{ height: 150%; }
+   100%{ height: 100%; }
+ }
+  .cursor.active{
+    width: 100px;
+    border:0;
+    background: #fff;
+  }
+  @keyframes click{
+    0%{transform:scale(1) }
+    25%{transform:scale(0.5) }
+    50%{transform:scale(2) }
+    100%{transform:scale(1) }
+  }
+  @keyframes over{
+    0%{transform:scale(1);}   
+    100%{transform:scale(1.4); }
+  }
+  .over{
+    border: 3px; 
+    animation: over 1s 1 forwards;
+  }
+.click{ animation: click 1s 1 forwards; }
 body{ background-color: rgb(85, 85, 85);}
 section{ background-color: rgb(219, 219, 219)}
 .fix{
@@ -401,8 +452,12 @@ section:nth-child(2){ width: 100%; height: 70vh; display: flex; justify-content:
   }
 }
 section:nth-child(3){ width: 100%; height: 100vh;  
-  article{ padding: 10%; padding-right: 0; position: relative; text-align: right;
-  img{ max-width: 70%; } 
+  article{perspective: 900px; padding: 10%; padding-right: 0; position: relative; text-align: right; 
+ 
+  img{ max-width: 70%; }     
+  img:hover{ transform:scale(0.9);transition: 2s;  }
+  
+  
  #Layer_1{ 
    width: 200px;
    opacity: 0;     
@@ -441,7 +496,9 @@ section:nth-child(3){ width: 100%; height: 100vh;
 
   section:nth-child(4){ width: 100%; height: 100vh;  
           article{ padding: 10%; padding-left: 0; position: relative; text-align: left;
-          img{ max-width: 70%; } 
+            img{ max-width: 70%; }     
+  img:hover{ transform:scale(0.9);transition: 2s;  }
+  
          #Layer_2{ 
            width: 250px; 
            opacity: 0;     
@@ -480,7 +537,9 @@ section:nth-child(3){ width: 100%; height: 100vh;
 
   section:nth-child(5){ width: 100%; height: 100vh;  
     article{ padding: 10%; padding-right: 0; position: relative; text-align: right;
-    img{ max-width: 70%; } 
+      img{ max-width: 70%; }     
+  img:hover{ transform:scale(0.9);transition: 2s;  }
+  
     #Layer_3{ 
       width: 250px;
       opacity: 0;     
@@ -519,7 +578,9 @@ section:nth-child(3){ width: 100%; height: 100vh;
 
 section:nth-child(6){ width: 100%; height: 100vh;  
           article{ padding: 10%; padding-left: 0; position: relative; text-align: left;
-          img{ max-width: 70%; } 
+            img{ max-width: 70%; }     
+  img:hover{ transform:scale(0.9);transition: 2s;  }
+   
          #Layer_4{ 
            width: 250px; 
            opacity: 0;     
