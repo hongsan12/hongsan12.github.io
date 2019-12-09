@@ -90,7 +90,7 @@ nav >ul { position:absolute; top:30%; left:0px;   width:100%;}
 nav li a { display:block; color: rgb(88, 88, 88); width:100%; box-sizing:border-box; font-size:20px; font-weight: 600; line-height:4;  text-align:center; transition:all 0.5s;}
 nav li a:hover { color:#fff;background:#000; }
 nav li ul{ text-align: center; display: none;}
-nav li ul a { font-size: 14px; text-align: left; padding-left: 25%; }
+nav li ul a { cursor: not-allowed; font-size: 14px; text-align: left; padding-left: 25%; }
 
 
 //테두리
